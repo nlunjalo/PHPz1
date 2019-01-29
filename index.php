@@ -3,6 +3,19 @@ if(!isset($_GET['menu'])) {$_GET['menu']=0;}
 
 	# DB Conn
 	include ("dbconn.php");
+	
+	# Start
+    session_start();
+	
+	# Variables MUST BE INT
+    if(isset($_GET['menu'])) {$menu = (int)$_GET['menu'];}
+	if(isset($_GET['action'])) {$action = (int)$_GET['action'];}
+	
+	# Variables MUST BE STRINGS A-Z
+    if(!isset($_POST['_action_']))  { $_POST['_action_'] = FALSE;  }
+	
+	# Classes & Functions
+    include_once("functions.php");
 
 print '
 <!DOCTYPE html>
@@ -54,9 +67,17 @@ else if ($_GET['menu']==3) {
 else if ($_GET['menu']==4) {
         include("html/novosti.php");
 }
+else if ($_GET['menu']==5) { 
+		include("reg.php"); 
+}
+else if ($_GET['menu']==6) { 
+		include("sign.php"); 
+}
+else if ($_GET['menu']==7) { 
+		include("admin.php"); 
+}
 else  include("html/html.php");
 print '
-	
 
 
 
