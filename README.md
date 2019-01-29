@@ -1,2 +1,1 @@
-# PHPz
-PHP Zadatak 4
+# PHPz - PHPzadatak 4
