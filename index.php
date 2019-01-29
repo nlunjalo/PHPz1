@@ -1,5 +1,9 @@
 <?php
 if(!isset($_GET['menu'])) {$_GET['menu']=0;}
+
+	# DB Conn
+	include ("dbconn.php");
+
 print '
 <!DOCTYPE html>
 <html>
