@@ -65,7 +65,7 @@ else if ($_GET['menu']==3) {
         include("html/galerija.php");
 }
 else if ($_GET['menu']==4) {
-        include("html/novosti.php");
+        include("news.php");
 }
 else if ($_GET['menu']==5) { 
 		include("reg.php"); 
